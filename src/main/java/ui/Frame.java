@@ -1,9 +1,8 @@
 package ui;
 
-import client.Client;
-import client.RequestStatusListener;
-import client.UserStatusListener;
+import client.*;
 import piece.Piece;
+import query.Query;
 import scene.Layer;
 import scene.PieceScene;
 
@@ -17,7 +16,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Frame extends JFrame implements UserStatusListener, RequestStatusListener {
+public class Frame extends JFrame implements UserStatusListener, RequestStatusListener, SendListener, MoveStatusListener {
     private Container container;
     private JPanel bottomPanel;
     private Map<String, JButton> userConnectedMap = new HashMap<>();
@@ -36,6 +35,8 @@ public class Frame extends JFrame implements UserStatusListener, RequestStatusLi
         client.connect();
         client.addUserStatusListener(this);
         client.addRequestStatusListener(this);
+        client.addSendListener(this);
+        client.addMoveStatusListener(this);
 
         bottomPanel = new JPanel();
         container.add(bottomPanel,BorderLayout.SOUTH);
@@ -53,17 +54,32 @@ public class Frame extends JFrame implements UserStatusListener, RequestStatusLi
         addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
-                switch (e.getKeyCode()) {
-                    case 39:
-                        PieceScene.moveCurrentPiece(Piece.Direction.RIGHT);
-                        break;
-                    case 37:
-                        PieceScene.moveCurrentPiece(Piece.Direction.LEFT);
-                        break;
-                    case 40:
-                        PieceScene.moveCurrentPiece(Piece.Direction.BOTTOM);
-                    default:
-                        break;
+                System.out.println(e.getKeyCode());
+                try{
+                    Query query = new Query();
+                    query.setSenderLogin(client.getLogin());
+                    query.setCmd(Query.MOVE_PIECE);
+                    switch (e.getKeyCode()) {
+                        case 39:
+                            PieceScene.moveCurrentPiece(Piece.Direction.RIGHT);
+                            query.setDirection(Piece.Direction.RIGHT);
+                            client.sendMove(query);
+                            break;
+                        case 37:
+                            PieceScene.moveCurrentPiece(Piece.Direction.LEFT);
+                            query.setDirection(Piece.Direction.LEFT);
+                            client.sendMove(query);
+                            break;
+                        case 40:
+                            PieceScene.moveCurrentPiece(Piece.Direction.BOTTOM);
+                            query.setDirection(Piece.Direction.BOTTOM);
+                            client.sendMove(query);
+                            break;
+                        default:
+                            break;
+                    }
+                }catch (IOException io){
+                    io.printStackTrace();
                 }
             }
         });
@@ -105,10 +121,11 @@ public class Frame extends JFrame implements UserStatusListener, RequestStatusLi
 
     @Override
     public void accept(String login) {
-        JOptionPane.showMessageDialog(this,String.format("%s a acception votre invitation",login),"Réponse invitation",JOptionPane.INFORMATION_MESSAGE);
+//        JOptionPane.showMessageDialog(this,String.format("%s a acception votre invitation",login),"Réponse invitation",JOptionPane.INFORMATION_MESSAGE);
         Layer layer = new Layer();
         container.add(layer);
         container.validate();
+        this.requestFocus();
     }
 
     @Override
@@ -121,7 +138,7 @@ public class Frame extends JFrame implements UserStatusListener, RequestStatusLi
         JButton statusButton = new JButton(login);
         statusButton.addActionListener(e->{
             try {
-                client.resquest(login);
+                client.request(login);
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
@@ -141,5 +158,15 @@ public class Frame extends JFrame implements UserStatusListener, RequestStatusLi
 
     public Client getClient() {
         return client;
+    }
+
+    @Override
+    public void onSend(Query query) {
+
+    }
+
+    @Override
+    public void onMove(Piece.Direction direction) {
+        PieceScene.moveCurrentPiece(direction);
     }
 }

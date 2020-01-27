@@ -61,6 +61,21 @@ public class ServerWorker extends Thread {
                 case Query.DECLINE_REQUEST:
                     handleDeclineRequest(query);
                     break;
+                case Query.MOVE_PIECE:
+                    handleMovePiece(query);
+                    break;
+            }
+        }
+    }
+
+    private void handleMovePiece(Query query) throws IOException {
+        Query response = new Query();
+        for (ServerWorker worker : server.getWorkers()) {
+            if (!query.getSenderLogin().equals(worker.userName)) {
+                response.setCmd(Query.RECEIVE_MOVE_PIECE);
+                response.setDirection(query.getDirection());
+//                response.setReceiverLogin(query.getSenderLogin());
+                worker.send(response);
             }
         }
     }

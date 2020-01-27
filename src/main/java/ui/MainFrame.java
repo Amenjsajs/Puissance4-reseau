@@ -59,7 +59,7 @@ public class MainFrame extends JFrame implements UserStatusListener, RequestStat
 //        JButton statusButton = new JButton(login);
 //        statusButton.addActionListener(e->{
 //            try {
-//                client.resquest(login);
+//                client.request(login);
 //            } catch (IOException ex) {
 //                ex.printStackTrace();
 //            }

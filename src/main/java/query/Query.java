@@ -13,8 +13,12 @@ public class Query implements Serializable {
     public static final String LOGIN_OK = "login_ok";
     public static final String LOGIN_FAILED = "login_failed";
     public static final String LOGOUT_OK = "logout_ok";
+    public static final String MOVE_TO_LEFT = "move_to_left";
+    public static final String MOVE_TO_RIGHT = "move_to_right";
+    public static final String MOVE_TO_BOTTOM = "move_to_bottom";
     public static final String MOVE_PIECE = "move_piece";
-    public static final String SEND = "send";
+    public static final String RECEIVE_MOVE_PIECE = "receive_move_piece";
+    public static final String SEND = "sendMove";
     public static final String RECEIVE = "receive";
     public static final String REQUEST = "request";
     public static final String RECEIVE_REQUEST = "receive_request";
@@ -26,6 +30,15 @@ public class Query implements Serializable {
     private String senderLogin;
     private String receiverLogin;
     private String cmd;
+    private Piece.Direction direction;
+
+    public Piece.Direction getDirection() {
+        return direction;
+    }
+
+    public void setDirection(Piece.Direction direction) {
+        this.direction = direction;
+    }
 
     public String getCmd() {
         return cmd;

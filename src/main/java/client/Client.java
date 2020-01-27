@@ -1,5 +1,6 @@
 package client;
 
+import piece.Piece;
 import query.Query;
 
 import java.io.IOException;
@@ -19,13 +20,14 @@ public class Client {
     private ArrayList<UserStatusListener> userStatusListeners = new ArrayList<>();
     private ArrayList<SendListener> sendListeners = new ArrayList<>();
     private ArrayList<RequestStatusListener> requestStatusListeners = new ArrayList<>();
+    private ArrayList<MoveStatusListener> moveStatusListeners = new ArrayList<>();
 
     public Client(String host, int serverPort) {
         this.host = host;
         this.serverPort = serverPort;
     }
 
-    public void send(Query query) throws IOException {
+    public void sendMove(Query query) throws IOException {
         oos.writeObject(query);
     }
 
@@ -46,7 +48,7 @@ public class Client {
         return false;
     }
 
-    public void resquest(String login2) throws IOException {
+    public void request(String login2) throws IOException {
         Query query = new Query();
         query.setSenderLogin(login);
         query.setReceiverLogin(login2);
@@ -105,6 +107,9 @@ public class Client {
                     case Query.RECEIVE_DECLINE_REQUEST:
                         handleReceiveDeclineRequest(query);
                         break;
+                    case Query.RECEIVE_MOVE_PIECE:
+                        handleReceiveMovePiece(query);
+                        break;
                 }
             }
         } catch (Exception ex) {
@@ -114,6 +119,12 @@ public class Client {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    private void handleReceiveMovePiece(Query query) {
+        for (MoveStatusListener listener: moveStatusListeners){
+            listener.onMove(query.getDirection());
         }
     }
 
@@ -197,5 +208,13 @@ public class Client {
 
     public void removeRequestStatusListener(RequestStatusListener listener){
         requestStatusListeners.remove(listener);
+    }
+
+    public void addMoveStatusListener(MoveStatusListener moveStatusListener){
+        moveStatusListeners.add(moveStatusListener);
+    }
+
+    public void removeMoveStatusListener(MoveStatusListener moveStatusListener){
+        moveStatusListeners.remove(moveStatusListener);
     }
 }
