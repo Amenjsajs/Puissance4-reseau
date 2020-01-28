@@ -122,10 +122,10 @@ public class PieceScene extends JPanel {
                                 break;
                             }
                         }
-                        if(winnerPieces.size()<4){
+                        if (winnerPieces.size() < 4) {
                             generatePiece();
                             turn = !turn;
-                        }else{
+                        } else {
                             break;
                         }
                     }

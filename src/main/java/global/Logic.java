@@ -13,8 +13,7 @@ public class Logic {
     private static Piece piece;//La piece qui vient d'être jouée
 
     /**
-     *
-     * @param piece qui vient d'être jouée
+     * @param piece      qui vient d'être jouée
      * @param gridColumn Grille de toutes les pieces jouées
      * @return La liste des pieces gagnantes
      */
@@ -69,7 +68,7 @@ public class Logic {
 
         pieces.add(piece);
         //left direction
-        for (int i = coord.y - 1; i > 0; i--) {
+        for (int i = coord.y - 1; i >= 0; i--) {
             if (notPopulateHorizontal(i)) break;
         }
 

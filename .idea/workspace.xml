@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5161b9a-e7a4-46aa-89ab-5ff084c42fac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scene/Layer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scene/Layer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/global/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/global/Logic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/scene/PieceScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scene/PieceScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Frame.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ui/Frame.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1059">
@@ -76,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/scene/PieceScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="148" column="36" selection-start-line="148" selection-start-column="36" selection-end-line="148" selection-end-column="36" />
+            <state relative-caret-position="274">
+              <caret line="119" column="59" selection-start-line="119" selection-start-column="59" selection-end-line="119" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2503#2504#0" expanded="true" />
@@ -90,9 +88,22 @@
                 <element signature="e#2728#2729#0" expanded="true" />
                 <element signature="e#2766#2767#0" expanded="true" />
                 <element signature="e#2795#2796#0" expanded="true" />
+                <element signature="e#4679#4680#0" expanded="true" />
                 <element signature="e#4706#4707#0" expanded="true" />
                 <element signature="e#4754#4755#0" expanded="true" />
                 <element signature="e#4792#4793#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/global/Logic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="64" column="28" lean-forward="true" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -189,7 +200,6 @@
         <option value="$PROJECT_DIR$/src/main/java/global/Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/server/ServerMain.java" />
         <option value="$PROJECT_DIR$/src/main/java/server/Server.java" />
-        <option value="$PROJECT_DIR$/src/main/java/global/Logic.java" />
         <option value="$PROJECT_DIR$/src/main/java/piece/Piece.java" />
         <option value="$PROJECT_DIR$/src/main/java/client/SendListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/client/UserStatusListener.java" />
@@ -201,9 +211,10 @@
         <option value="$PROJECT_DIR$/src/main/java/client/Client.java" />
         <option value="$PROJECT_DIR$/src/main/java/server/ServerWorker.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/scene/PieceScene.java" />
         <option value="$PROJECT_DIR$/src/main/java/scene/Layer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ui/Frame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/scene/PieceScene.java" />
+        <option value="$PROJECT_DIR$/src/main/java/global/Logic.java" />
       </list>
     </option>
   </component>
@@ -403,16 +414,15 @@
       <option name="presentableId" value="Default" />
       <updated>1579789711843</updated>
       <workItem from="1579789718976" duration="16642000" />
-      <workItem from="1579864438614" duration="104312000" />
+      <workItem from="1579864438614" duration="107238000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120954000" />
+    <option name="totallyTimeSpent" value="123880000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -424,7 +434,7 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289855" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.35362318" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35362318" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -577,16 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/global/Logic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4836">
-          <caret line="156" column="34" selection-start-line="156" selection-start-column="34" selection-end-line="156" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -760,29 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scene/PieceScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="148" column="36" selection-start-line="148" selection-start-column="36" selection-end-line="148" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2503#2504#0" expanded="true" />
-            <element signature="e#2549#2550#0" expanded="true" />
-            <element signature="e#2596#2597#0" expanded="true" />
-            <element signature="e#2634#2635#0" expanded="true" />
-            <element signature="e#2530#2531#0" expanded="true" />
-            <element signature="e#2560#2561#0" expanded="true" />
-            <element signature="e#2694#2695#0" expanded="true" />
-            <element signature="e#2728#2729#0" expanded="true" />
-            <element signature="e#2766#2767#0" expanded="true" />
-            <element signature="e#2795#2796#0" expanded="true" />
-            <element signature="e#4706#4707#0" expanded="true" />
-            <element signature="e#4754#4755#0" expanded="true" />
-            <element signature="e#4792#4793#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/scene/Layer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
@@ -808,6 +785,40 @@
             <element signature="e#3644#3645#0" expanded="true" />
             <element signature="e#5624#5625#0" expanded="true" />
             <element signature="e#5805#5806#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scene/PieceScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="119" column="59" selection-start-line="119" selection-start-column="59" selection-end-line="119" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2503#2504#0" expanded="true" />
+            <element signature="e#2549#2550#0" expanded="true" />
+            <element signature="e#2596#2597#0" expanded="true" />
+            <element signature="e#2634#2635#0" expanded="true" />
+            <element signature="e#2530#2531#0" expanded="true" />
+            <element signature="e#2560#2561#0" expanded="true" />
+            <element signature="e#2694#2695#0" expanded="true" />
+            <element signature="e#2728#2729#0" expanded="true" />
+            <element signature="e#2766#2767#0" expanded="true" />
+            <element signature="e#2795#2796#0" expanded="true" />
+            <element signature="e#4679#4680#0" expanded="true" />
+            <element signature="e#4706#4707#0" expanded="true" />
+            <element signature="e#4754#4755#0" expanded="true" />
+            <element signature="e#4792#4793#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/global/Logic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="64" column="28" lean-forward="true" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
