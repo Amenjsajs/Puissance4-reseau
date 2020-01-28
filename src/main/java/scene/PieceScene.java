@@ -33,7 +33,6 @@ public class PieceScene extends JPanel {
         generatePiece();
         handlePieceAppearance();
         pieceScenes.add(this);
-        System.out.println(pieceScenes);
     }
 
     @Override
@@ -69,10 +68,8 @@ public class PieceScene extends JPanel {
 
     public static void moveCurrentPiece(Piece.Direction direction) {
         for (PieceScene pieceScene : pieceScenes) {
-            //if (pieceScene.isFocused()) {
             pieceScene.currentPiece.move(direction);
-            //break;
-            //}
+            break;
         }
     }
 
@@ -114,15 +111,21 @@ public class PieceScene extends JPanel {
                 try {
                     if (currentPiece.isCameDown()) {
                         int x = currentPiece.getX() / Config.Grid.CELL_SIZE;
+                        List<Piece> winnerPieces = new ArrayList<>();
 
                         for (int i = 0; i < Config.Grid.ROW_COUNT; i++) {
                             if (gridColumn[i][x] == null) {
                                 gridColumn[i][x] = currentPiece;
-                                Logic.getWinnerPieces(currentPiece, gridColumn).forEach(Piece::setInNeutralColor);
+                                winnerPieces = Logic.getWinnerPieces(currentPiece, gridColumn);
+                                winnerPieces.forEach(Piece::setInNeutralColor);
                                 break;
                             }
                         }
-                        generatePiece();
+                        if(winnerPieces.size()<4){
+                            generatePiece();
+                        }else{
+                            break;
+                        }
                     }
                     Thread.sleep(1);
                 } catch (InterruptedException i) {
@@ -135,7 +138,8 @@ public class PieceScene extends JPanel {
 
     public static Piece[][] getGridColumn() {
         for (PieceScene pieceScene : pieceScenes) {
-            if (pieceScene.isFocused()) return pieceScene.gridColumn;
+//            if (pieceScene.isFocused()) return pieceScene.gridColumn;
+            return pieceScene.gridColumn;
         }
         return new Piece[][]{};
     }

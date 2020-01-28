@@ -39,7 +39,7 @@ public class Frame extends JFrame implements UserStatusListener, RequestStatusLi
         client.addMoveStatusListener(this);
 
         bottomPanel = new JPanel();
-        container.add(bottomPanel,BorderLayout.SOUTH);
+        container.add(bottomPanel, BorderLayout.SOUTH);
 
         String name = System.getProperty("user.name") + System.currentTimeMillis();
         try {
@@ -55,7 +55,7 @@ public class Frame extends JFrame implements UserStatusListener, RequestStatusLi
             @Override
             public void keyReleased(KeyEvent e) {
                 System.out.println(e.getKeyCode());
-                try{
+                try {
                     Query query = new Query();
                     query.setSenderLogin(client.getLogin());
                     query.setCmd(Query.MOVE_PIECE);
@@ -78,7 +78,7 @@ public class Frame extends JFrame implements UserStatusListener, RequestStatusLi
                         default:
                             break;
                     }
-                }catch (IOException io){
+                } catch (IOException io) {
                     io.printStackTrace();
                 }
             }
@@ -104,17 +104,17 @@ public class Frame extends JFrame implements UserStatusListener, RequestStatusLi
 
     @Override
     public void receive(String login) {
-        int re = JOptionPane.showConfirmDialog(this,String.format("%s vous invite à jouer",login),"Invitation",JOptionPane.YES_NO_OPTION);
+        int re = JOptionPane.showConfirmDialog(this, String.format("%s vous invite à jouer", login), "Invitation", JOptionPane.YES_NO_OPTION);
         try {
-            if(re == JOptionPane.YES_OPTION){
+            if (re == JOptionPane.YES_OPTION) {
                 Layer layer = new Layer();
                 client.acceptRequest(login);
                 container.add(layer);
                 container.validate();
-            }else{
+            } else {
                 client.declineRequest(login);
             }
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -130,13 +130,13 @@ public class Frame extends JFrame implements UserStatusListener, RequestStatusLi
 
     @Override
     public void decline(String login) {
-        JOptionPane.showMessageDialog(this,String.format("%s a acception votre invitation",login),"Réponse invitation",JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(this, String.format("%s a acception votre invitation", login), "Réponse invitation", JOptionPane.WARNING_MESSAGE);
     }
 
     @Override
     public void online(String login) {
         JButton statusButton = new JButton(login);
-        statusButton.addActionListener(e->{
+        statusButton.addActionListener(e -> {
             try {
                 client.request(login);
             } catch (IOException ex) {
