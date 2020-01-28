@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5161b9a-e7a4-46aa-89ab-5ff084c42fac" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/scene/Layer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scene/Layer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/scene/PieceScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scene/PieceScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/scene/Layer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scene/Layer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/scene/PieceScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scene/PieceScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ui/Frame$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ui/Frame$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ui/Frame.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,49 +56,43 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/client/SendListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ui/Frame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
+            <state relative-caret-position="-1059">
+              <caret line="128" column="36" selection-start-line="128" selection-start-column="36" selection-end-line="128" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1653#3162#0" expanded="true" />
-                <element signature="e#3161#3162#0" expanded="true" />
-                <element signature="e#3487#3488#0" expanded="true" />
-                <element signature="e#5380#5381#0" expanded="true" />
-                <element signature="e#5561#5562#0" expanded="true" />
+                <element signature="e#1653#3099#0" expanded="true" />
+                <element signature="e#3098#3099#0" expanded="true" />
+                <element signature="e#3644#3645#0" expanded="true" />
+                <element signature="e#5624#5625#0" expanded="true" />
+                <element signature="e#5805#5806#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/scene/PieceScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="429">
+              <caret line="148" column="36" selection-start-line="148" selection-start-column="36" selection-end-line="148" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2503#2504#0" expanded="true" />
                 <element signature="e#2549#2550#0" expanded="true" />
                 <element signature="e#2596#2597#0" expanded="true" />
                 <element signature="e#2634#2635#0" expanded="true" />
+                <element signature="e#2530#2531#0" expanded="true" />
+                <element signature="e#2560#2561#0" expanded="true" />
                 <element signature="e#2694#2695#0" expanded="true" />
                 <element signature="e#2728#2729#0" expanded="true" />
                 <element signature="e#2766#2767#0" expanded="true" />
                 <element signature="e#2795#2796#0" expanded="true" />
-                <element signature="e#2829#2830#0" expanded="true" />
-                <element signature="e#2859#2860#0" expanded="true" />
+                <element signature="e#4706#4707#0" expanded="true" />
+                <element signature="e#4754#4755#0" expanded="true" />
+                <element signature="e#4792#4793#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,10 +126,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/scene/Layer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="775">
-              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="567">
+              <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#823#824#0" expanded="true" />
+                <element signature="e#848#849#0" expanded="true" />
+                <element signature="e#910#911#0" expanded="true" />
+                <element signature="e#935#936#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -206,9 +200,10 @@
         <option value="$PROJECT_DIR$/src/main/java/query/Query.java" />
         <option value="$PROJECT_DIR$/src/main/java/client/Client.java" />
         <option value="$PROJECT_DIR$/src/main/java/server/ServerWorker.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/scene/PieceScene.java" />
         <option value="$PROJECT_DIR$/src/main/java/scene/Layer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ui/Frame.java" />
-        <option value="$PROJECT_DIR$/src/main/java/scene/PieceScene.java" />
       </list>
     </option>
   </component>
@@ -408,12 +403,12 @@
       <option name="presentableId" value="Default" />
       <updated>1579789711843</updated>
       <workItem from="1579789718976" duration="16642000" />
-      <workItem from="1579864438614" duration="103107000" />
+      <workItem from="1579864438614" duration="104312000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119749000" />
+    <option name="totallyTimeSpent" value="120954000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -434,7 +429,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.4188406" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.4188406" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3289855" />
@@ -746,31 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/scene/Layer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ui/Frame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="161" lean-forward="true" selection-start-line="161" selection-end-line="161" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1653#3162#0" expanded="true" />
-            <element signature="e#3161#3162#0" expanded="true" />
-            <element signature="e#3487#3488#0" expanded="true" />
-            <element signature="e#5380#5381#0" expanded="true" />
-            <element signature="e#5561#5562#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/server/ServerWorker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2883">
@@ -783,22 +753,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/scene/PieceScene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="429">
+          <caret line="148" column="36" selection-start-line="148" selection-start-column="36" selection-end-line="148" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2503#2504#0" expanded="true" />
             <element signature="e#2549#2550#0" expanded="true" />
             <element signature="e#2596#2597#0" expanded="true" />
             <element signature="e#2634#2635#0" expanded="true" />
+            <element signature="e#2530#2531#0" expanded="true" />
+            <element signature="e#2560#2561#0" expanded="true" />
             <element signature="e#2694#2695#0" expanded="true" />
             <element signature="e#2728#2729#0" expanded="true" />
             <element signature="e#2766#2767#0" expanded="true" />
             <element signature="e#2795#2796#0" expanded="true" />
-            <element signature="e#2829#2830#0" expanded="true" />
-            <element signature="e#2859#2860#0" expanded="true" />
+            <element signature="e#4706#4707#0" expanded="true" />
+            <element signature="e#4754#4755#0" expanded="true" />
+            <element signature="e#4792#4793#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/scene/Layer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#935#936#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ui/Frame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1059">
+          <caret line="128" column="36" selection-start-line="128" selection-start-column="36" selection-end-line="128" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1653#3099#0" expanded="true" />
+            <element signature="e#3098#3099#0" expanded="true" />
+            <element signature="e#3644#3645#0" expanded="true" />
+            <element signature="e#5624#5625#0" expanded="true" />
+            <element signature="e#5805#5806#0" expanded="true" />
           </folding>
         </state>
       </provider>

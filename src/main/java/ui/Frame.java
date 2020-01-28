@@ -56,27 +56,29 @@ public class Frame extends JFrame implements UserStatusListener, RequestStatusLi
             public void keyReleased(KeyEvent e) {
                 System.out.println(e.getKeyCode());
                 try {
-                    Query query = new Query();
-                    query.setSenderLogin(client.getLogin());
-                    query.setCmd(Query.MOVE_PIECE);
-                    switch (e.getKeyCode()) {
-                        case 39:
-                            PieceScene.moveCurrentPiece(Piece.Direction.RIGHT);
-                            query.setDirection(Piece.Direction.RIGHT);
-                            client.sendMove(query);
-                            break;
-                        case 37:
-                            PieceScene.moveCurrentPiece(Piece.Direction.LEFT);
-                            query.setDirection(Piece.Direction.LEFT);
-                            client.sendMove(query);
-                            break;
-                        case 40:
-                            PieceScene.moveCurrentPiece(Piece.Direction.BOTTOM);
-                            query.setDirection(Piece.Direction.BOTTOM);
-                            client.sendMove(query);
-                            break;
-                        default:
-                            break;
+                    if (PieceScene.isTurn()) {
+                        Query query = new Query();
+                        query.setSenderLogin(client.getLogin());
+                        query.setCmd(Query.MOVE_PIECE);
+                        switch (e.getKeyCode()) {
+                            case 39:
+                                PieceScene.moveCurrentPiece(Piece.Direction.RIGHT);
+                                query.setDirection(Piece.Direction.RIGHT);
+                                client.sendMove(query);
+                                break;
+                            case 37:
+                                PieceScene.moveCurrentPiece(Piece.Direction.LEFT);
+                                query.setDirection(Piece.Direction.LEFT);
+                                client.sendMove(query);
+                                break;
+                            case 40:
+                                PieceScene.moveCurrentPiece(Piece.Direction.BOTTOM);
+                                query.setDirection(Piece.Direction.BOTTOM);
+                                client.sendMove(query);
+                                break;
+                            default:
+                                break;
+                        }
                     }
                 } catch (IOException io) {
                     io.printStackTrace();
@@ -108,6 +110,7 @@ public class Frame extends JFrame implements UserStatusListener, RequestStatusLi
         try {
             if (re == JOptionPane.YES_OPTION) {
                 Layer layer = new Layer();
+                layer.setPieceSceneTurn(false);
                 client.acceptRequest(login);
                 container.add(layer);
                 container.validate();
@@ -123,6 +126,7 @@ public class Frame extends JFrame implements UserStatusListener, RequestStatusLi
     public void accept(String login) {
 //        JOptionPane.showMessageDialog(this,String.format("%s a acception votre invitation",login),"Réponse invitation",JOptionPane.INFORMATION_MESSAGE);
         Layer layer = new Layer();
+        layer.setPieceSceneTurn(true);
         container.add(layer);
         container.validate();
         this.requestFocus();

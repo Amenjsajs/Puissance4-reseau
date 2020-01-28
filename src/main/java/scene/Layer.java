@@ -24,4 +24,12 @@ public class Layer extends JPanel {
         layeredPane.add(new Grid(), JLayeredPane.POPUP_LAYER);
         add(layeredPane);
     }
+
+    public void setPieceSceneTurn(boolean isTurn){
+        PieceScene.setTurn(isTurn);
+    }
+
+    public boolean getPieceSceneTurn(){
+        return PieceScene.isTurn();
+    }
 }

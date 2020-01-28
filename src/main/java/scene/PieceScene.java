@@ -21,6 +21,7 @@ public class PieceScene extends JPanel {
     private static ArrayList<PieceScene> pieceScenes = new ArrayList<>();
 
     private boolean focused = false;
+    private static boolean turn;
 
     public PieceScene() {
         setBounds(0, 0, Grid.width, Grid.height + Config.Grid.CELL_SIZE + Config.Grid.CELL_BORDER_WIDTH);
@@ -81,16 +82,16 @@ public class PieceScene extends JPanel {
         this.focused = focused;
     }
 
+    public boolean isFocused() {
+        return focused;
+    }
+
     public static ArrayList<PieceScene> getPieceScenes() {
         return pieceScenes;
     }
 
     public List<Piece> getPieces() {
         return pieces;
-    }
-
-    public boolean isFocused() {
-        return focused;
     }
 
     private void generatePiece() {
@@ -123,6 +124,7 @@ public class PieceScene extends JPanel {
                         }
                         if(winnerPieces.size()<4){
                             generatePiece();
+                            turn = !turn;
                         }else{
                             break;
                         }
@@ -142,5 +144,13 @@ public class PieceScene extends JPanel {
             return pieceScene.gridColumn;
         }
         return new Piece[][]{};
+    }
+
+    public static boolean isTurn() {
+        return turn;
+    }
+
+    public static void setTurn(boolean turn) {
+        PieceScene.turn = turn;
     }
 }
